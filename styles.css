@@ -73,3 +73,35 @@ footer { max-width: 1160px; margin: 0 auto; padding: 0 18px 30px; color: var(--m
   .card { padding: 16px; border-radius: 20px; }
   .qualified-row { grid-template-columns: 1fr; gap: 6px; }
 }
+
+.ko-layout {
+  display: grid;
+  gap: 22px;
+}
+
+.ko-block {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+  background: #fcfdfd;
+}
+
+.ko-block h3 {
+  margin: 0 0 8px;
+}
+
+.ko-note {
+  margin: 0 0 12px;
+}
+
+.bracket-scroll {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.bracket-svg {
+  display: block;
+  width: 100%;
+  min-width: 1100px;
+  height: auto;
+}

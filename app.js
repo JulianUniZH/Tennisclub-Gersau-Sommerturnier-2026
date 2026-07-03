@@ -83,12 +83,160 @@ function renderAllMatches() {
   $("#matches").innerHTML = byGroup;
 }
 
+function svgLine(x1, y1, x2, y2) {
+  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#111" stroke-width="4" stroke-linecap="square" />`;
+}
+
+function svgConnector(fromX, fromY, toX, toY) {
+  const midX = fromX + 20;
+  return [
+    svgLine(fromX, fromY, midX, fromY),
+    svgLine(midX, fromY, midX, toY),
+    svgLine(midX, toY, toX, toY)
+  ].join("");
+}
+
+function svgMatch(x, y, line1 = "", line2 = "", width = 360, height = 60) {
+  const text1 = line1 || "";
+  const text2 = line2 || "";
+  return `
+    <g>
+      <rect x="${x}" y="${y}" width="${width}" height="${height}" fill="#f8f9fb" stroke="#cfd5dc" stroke-width="2" />
+      <rect x="${x}" y="${y}" width="28" height="${height}" fill="#b9c5d6" />
+      <line x1="${x}" y1="${y + height / 2}" x2="${x + width}" y2="${y + height / 2}" stroke="#d7dce2" stroke-width="2" />
+      <line x1="${x + width - 70}" y1="${y}" x2="${x + width - 70}" y2="${y + height}" stroke="#cfd5dc" stroke-width="2" />
+      <text x="${x + 46}" y="${y + 22}" font-family="Arial, sans-serif" font-size="18" fill="#111">${text1}</text>
+      <text x="${x + 46}" y="${y + 48}" font-family="Arial, sans-serif" font-size="18" fill="#111">${text2}</text>
+    </g>
+  `;
+}
+
+function mainBracketSvg() {
+  const w = 360;
+  const h = 60;
+
+  const x1 = 0;
+  const x2 = 420;
+  const x3 = 840;
+  const x4 = 1260;
+
+  const m = [
+    { x: x1, y: 0,   a: "-",                b: "-" },
+    { x: x1, y: 90,  a: "Zweiter Gruppe C", b: "Dritter Gruppe D" },
+    { x: x2, y: 45,  a: "Sieger Gruppe A",  b: "" },
+
+    { x: x1, y: 210, a: "-",                b: "-" },
+    { x: x1, y: 300, a: "Zweiter Gruppe D", b: "Dritter Gruppe C" },
+    { x: x2, y: 255, a: "Sieger Gruppe B",  b: "" },
+
+    { x: x1, y: 420, a: "-",                b: "-" },
+    { x: x1, y: 510, a: "Zweiter Gruppe A", b: "Dritter Gruppe B" },
+    { x: x2, y: 465, a: "Sieger Gruppe C",  b: "" },
+
+    { x: x1, y: 630, a: "-",                b: "-" },
+    { x: x1, y: 720, a: "Zweiter Gruppe B", b: "Dritter Gruppe A" },
+    { x: x2, y: 675, a: "Sieger Gruppe D",  b: "" },
+
+    { x: x3, y: 150, a: "", b: "" },
+    { x: x3, y: 570, a: "", b: "" },
+
+    { x: x4, y: 360, a: "", b: "" }
+  ];
+
+  const matches = m.map(item => svgMatch(item.x, item.y, item.a, item.b, w, h)).join("");
+
+  const c = [
+    svgConnector(x1 + w, 30,  x2, 75),
+    svgConnector(x1 + w, 120, x2, 75),
+
+    svgConnector(x1 + w, 240, x2, 285),
+    svgConnector(x1 + w, 330, x2, 285),
+
+    svgConnector(x1 + w, 450, x2, 495),
+    svgConnector(x1 + w, 540, x2, 495),
+
+    svgConnector(x1 + w, 660, x2, 705),
+    svgConnector(x1 + w, 750, x2, 705),
+
+    svgConnector(x2 + w, 75,  x3, 180),
+    svgConnector(x2 + w, 285, x3, 180),
+
+    svgConnector(x2 + w, 495, x3, 600),
+    svgConnector(x2 + w, 705, x3, 600),
+
+    svgConnector(x3 + w, 180, x4, 390),
+    svgConnector(x3 + w, 600, x4, 390)
+  ].join("");
+
+  return `
+    <svg class="bracket-svg" viewBox="0 0 1640 790" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Haupttableau">
+      ${matches}
+      ${c}
+    </svg>
+  `;
+}
+
+function placementBracketSvg() {
+  const w = 360;
+  const h = 60;
+
+  const x1 = 0;
+  const x2 = 450;
+  const x3 = 900;
+
+  const m = [
+    { x: x1, y: 0,   a: "Vierter Gruppe A", b: "Fünfter Gruppe D" },
+    { x: x1, y: 170, a: "Vierter Gruppe B", b: "Fünfter Gruppe C" },
+    { x: x1, y: 360, a: "Vierter Gruppe C", b: "Fünfter Gruppe B" },
+    { x: x1, y: 530, a: "Vierter Gruppe D", b: "Fünfter Gruppe A" },
+
+    { x: x2, y: 85,  a: "", b: "" },
+    { x: x2, y: 445, a: "", b: "" },
+
+    { x: x3, y: 265, a: "", b: "" }
+  ];
+
+  const matches = m.map(item => svgMatch(item.x, item.y, item.a, item.b, w, h)).join("");
+
+  const c = [
+    svgConnector(x1 + w, 30,  x2, 115),
+    svgConnector(x1 + w, 200, x2, 115),
+
+    svgConnector(x1 + w, 390, x2, 475),
+    svgConnector(x1 + w, 560, x2, 475),
+
+    svgConnector(x2 + w, 115, x3, 295),
+    svgConnector(x2 + w, 475, x3, 295)
+  ].join("");
+
+  return `
+    <svg class="bracket-svg" viewBox="0 0 1300 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Platzierungstableau">
+      ${matches}
+      ${c}
+    </svg>
+  `;
+}
+
 function renderQualified() {
-  const rows = Object.keys(tournament.groups).map(group => {
-    const [first, second] = standingsFor(group);
-    return `<div class="qualified-row"><span>${group}</span><strong>1. ${first.name}</strong><strong>2. ${second.name}</strong></div>`;
-  }).join("");
-  $("#qualified").innerHTML = rows;
+  $("#qualified").innerHTML = `
+    <div class="ko-layout">
+      <div class="ko-block">
+        <h3>Haupttableau</h3>
+        <p class="muted ko-note">Aktuell als fixes Tableau gemäss deiner Setzung – noch ohne echte Spielernamen.</p>
+        <div class="bracket-scroll">
+          ${mainBracketSvg()}
+        </div>
+      </div>
+
+      <div class="ko-block">
+        <h3>Platzierungstableau</h3>
+        <p class="muted ko-note">Vierter und Fünfter jeder Gruppe gemäss deinem zweiten Bracket.</p>
+        <div class="bracket-scroll">
+          ${placementBracketSvg()}
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 function render() {
