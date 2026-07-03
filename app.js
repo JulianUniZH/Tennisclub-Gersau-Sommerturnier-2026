@@ -222,7 +222,7 @@ function renderQualified() {
     <div class="ko-layout">
       <div class="ko-block">
         <h3>Tableau 1</h3>
-        <p class="muted ko-note">Erster, Zweiter, und Dritter jeder Gruppe.</p>
+        <p class="muted ko-note">Für Rang 1, 2, 3 jeder Gruppe.</p>
         <div class="bracket-scroll">
           ${mainBracketSvg()}
         </div>
@@ -230,7 +230,7 @@ function renderQualified() {
 
       <div class="ko-block">
         <h3>Tableau 2</h3>
-        <p class="muted ko-note">Vierter und Fünfter jeder Gruppe.</p>
+        <p class="muted ko-note">Für Rang 4, 5 jeder Gruppe.</p>
         <div class="bracket-scroll">
           ${placementBracketSvg()}
         </div>
