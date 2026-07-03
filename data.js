@@ -3,63 +3,87 @@
 // Noch nicht gespielte Matches: score: ""
 
 const tournament = {
-  title: "Sommer Tennis Open 2026",
+  title: "Tennisclub Gersau Sommerturnier 2026",
   subtitle: "Gruppenphase · 4 Gruppen à 5 Spieler",
   pointsForWin: 1,
   updatedAt: "2026-07-03 12:00",
   groups: {
-    "Gruppe A": ["A1", "A2", "A3", "A4", "A5"],
-    "Gruppe B": ["B1", "B2", "B3", "B4", "B5"],
-    "Gruppe C": ["C1", "C2", "C3", "C4", "C5"],
-    "Gruppe D": ["D1", "D2", "D3", "D4", "D5"]
+    "Gruppe A": [
+      "Mitch Steffan",
+      "Mario Camenzind",
+      "Maximilian Weber",
+      "Christian Schnyder",
+      "Sabine Allemann"
+    ],
+    "Gruppe B": [
+      "Julian Bolfing",
+      "Pascal Steiner",
+      "Sandro Schuler",
+      "Alan Tarantino",
+      "Marco Appert"
+    ],
+    "Gruppe C": [
+      "Oliver Bolfing",
+      "Marcel Gehringer",
+      "Lars Nigg",
+      "Philip Camenzind",
+      "Petra Rotter"
+    ],
+    "Gruppe D": [
+      "Urs Huber",
+      "Vasco Sommacal",
+      "Enzo Nigg",
+      "Gianfranco Da Palma",
+      "Marco Camenzind"
+    ]
   },
   matches: [
     // Gruppe A
-    { group: "Gruppe A", p1: "A1", p2: "A2", score: "" },
-    { group: "Gruppe A", p1: "A3", p2: "A4", score: "" },
-    { group: "Gruppe A", p1: "A5", p2: "A1", score: "" },
-    { group: "Gruppe A", p1: "A2", p2: "A3", score: "" },
-    { group: "Gruppe A", p1: "A4", p2: "A5", score: "" },
-    { group: "Gruppe A", p1: "A1", p2: "A3", score: "" },
-    { group: "Gruppe A", p1: "A2", p2: "A4", score: "" },
-    { group: "Gruppe A", p1: "A3", p2: "A5", score: "" },
-    { group: "Gruppe A", p1: "A4", p2: "A1", score: "" },
-    { group: "Gruppe A", p1: "A5", p2: "A2", score: "" },
+    { group: "Gruppe A", p1: "Mitch Steffan", p2: "Mario Camenzind", score: "" },
+    { group: "Gruppe A", p1: "Maximilian Weber", p2: "Christian Schnyder", score: "" },
+    { group: "Gruppe A", p1: "Sabine Allemann", p2: "Mitch Steffan", score: "" },
+    { group: "Gruppe A", p1: "Mario Camenzind", p2: "Maximilian Weber", score: "" },
+    { group: "Gruppe A", p1: "Christian Schnyder", p2: "Sabine Allemann", score: "" },
+    { group: "Gruppe A", p1: "Mitch Steffan", p2: "Maximilian Weber", score: "" },
+    { group: "Gruppe A", p1: "Mario Camenzind", p2: "Christian Schnyder", score: "" },
+    { group: "Gruppe A", p1: "Maximilian Weber", p2: "Sabine Allemann", score: "" },
+    { group: "Gruppe A", p1: "Christian Schnyder", p2: "Mitch Steffan", score: "" },
+    { group: "Gruppe A", p1: "Sabine Allemann", p2: "Mario Camenzind", score: "" },
 
     // Gruppe B
-    { group: "Gruppe B", p1: "B1", p2: "B2", score: "" },
-    { group: "Gruppe B", p1: "B3", p2: "B4", score: "" },
-    { group: "Gruppe B", p1: "B5", p2: "B1", score: "" },
-    { group: "Gruppe B", p1: "B2", p2: "B3", score: "" },
-    { group: "Gruppe B", p1: "B4", p2: "B5", score: "" },
-    { group: "Gruppe B", p1: "B1", p2: "B3", score: "" },
-    { group: "Gruppe B", p1: "B2", p2: "B4", score: "" },
-    { group: "Gruppe B", p1: "B3", p2: "B5", score: "" },
-    { group: "Gruppe B", p1: "B4", p2: "B1", score: "" },
-    { group: "Gruppe B", p1: "B5", p2: "B2", score: "" },
+    { group: "Gruppe B", p1: "Julian Bolfing", p2: "Pascal Steiner", score: "6:4 6:1" },
+    { group: "Gruppe B", p1: "Sandro Schuler", p2: "Alan Tarantino", score: "" },
+    { group: "Gruppe B", p1: "Marco Appert", p2: "Julian Bolfing", score: "" },
+    { group: "Gruppe B", p1: "Pascal Steiner", p2: "Sandro Schuler", score: "" },
+    { group: "Gruppe B", p1: "Alan Tarantino", p2: "Marco Appert", score: "" },
+    { group: "Gruppe B", p1: "Julian Bolfing", p2: "Sandro Schuler", score: "" },
+    { group: "Gruppe B", p1: "Pascal Steiner", p2: "Alan Tarantino", score: "" },
+    { group: "Gruppe B", p1: "Sandro Schuler", p2: "Marco Appert", score: "" },
+    { group: "Gruppe B", p1: "Alan Tarantino", p2: "Julian Bolfing", score: "" },
+    { group: "Gruppe B", p1: "Marco Appert", p2: "Pascal Steiner", score: "" },
 
     // Gruppe C
-    { group: "Gruppe C", p1: "C1", p2: "C2", score: "" },
-    { group: "Gruppe C", p1: "C3", p2: "C4", score: "" },
-    { group: "Gruppe C", p1: "C5", p2: "C1", score: "" },
-    { group: "Gruppe C", p1: "C2", p2: "C3", score: "" },
-    { group: "Gruppe C", p1: "C4", p2: "C5", score: "" },
-    { group: "Gruppe C", p1: "C1", p2: "C3", score: "" },
-    { group: "Gruppe C", p1: "C2", p2: "C4", score: "" },
-    { group: "Gruppe C", p1: "C3", p2: "C5", score: "" },
-    { group: "Gruppe C", p1: "C4", p2: "C1", score: "" },
-    { group: "Gruppe C", p1: "C5", p2: "C2", score: "" },
+    { group: "Gruppe C", p1: "Oliver Bolfing", p2: "Marcel Gehringer", score: "" },
+    { group: "Gruppe C", p1: "Lars Nigg", p2: "Philip Camenzind", score: "" },
+    { group: "Gruppe C", p1: "Petra Rotter", p2: "Oliver Bolfing", score: "" },
+    { group: "Gruppe C", p1: "Marcel Gehringer", p2: "Lars Nigg", score: "" },
+    { group: "Gruppe C", p1: "Philip Camenzind", p2: "Petra Rotter", score: "" },
+    { group: "Gruppe C", p1: "Oliver Bolfing", p2: "Lars Nigg", score: "" },
+    { group: "Gruppe C", p1: "Marcel Gehringer", p2: "Philip Camenzind", score: "" },
+    { group: "Gruppe C", p1: "Lars Nigg", p2: "Petra Rotter", score: "" },
+    { group: "Gruppe C", p1: "Philip Camenzind", p2: "Oliver Bolfing", score: "" },
+    { group: "Gruppe C", p1: "Petra Rotter", p2: "Marcel Gehringer", score: "" },
 
     // Gruppe D
-    { group: "Gruppe D", p1: "D1", p2: "D2", score: "" },
-    { group: "Gruppe D", p1: "D3", p2: "D4", score: "" },
-    { group: "Gruppe D", p1: "D5", p2: "D1", score: "" },
-    { group: "Gruppe D", p1: "D2", p2: "D3", score: "" },
-    { group: "Gruppe D", p1: "D4", p2: "D5", score: "" },
-    { group: "Gruppe D", p1: "D1", p2: "D3", score: "" },
-    { group: "Gruppe D", p1: "D2", p2: "D4", score: "" },
-    { group: "Gruppe D", p1: "D3", p2: "D5", score: "" },
-    { group: "Gruppe D", p1: "D4", p2: "D1", score: "" },
-    { group: "Gruppe D", p1: "D5", p2: "D2", score: "" }
+    { group: "Gruppe D", p1: "Urs Huber", p2: "Vasco Sommacal", score: "" },
+    { group: "Gruppe D", p1: "Enzo Nigg", p2: "Gianfranco Da Palma", score: "" },
+    { group: "Gruppe D", p1: "Marco Camenzind", p2: "Urs Huber", score: "" },
+    { group: "Gruppe D", p1: "Vasco Sommacal", p2: "Enzo Nigg", score: "" },
+    { group: "Gruppe D", p1: "Gianfranco Da Palma", p2: "Marco Camenzind", score: "" },
+    { group: "Gruppe D", p1: "Urs Huber", p2: "Enzo Nigg", score: "" },
+    { group: "Gruppe D", p1: "Vasco Sommacal", p2: "Gianfranco Da Palma", score: "" },
+    { group: "Gruppe D", p1: "Enzo Nigg", p2: "Marco Camenzind", score: "" },
+    { group: "Gruppe D", p1: "Gianfranco Da Palma", p2: "Urs Huber", score: "" },
+    { group: "Gruppe D", p1: "Marco Camenzind", p2: "Vasco Sommacal", score: "" }
   ]
 };
