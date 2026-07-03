@@ -48,7 +48,7 @@ function standingsFor(groupName) {
 
 function groupCard(groupName) {
   const rows = standingsFor(groupName).map((p, idx) => `
-    <tr class="${idx < 2 ? 'qualifier' : ''}">
+    <tr class="${idx < 3 ? 'qualifier' : ''}">
       <td>${idx + 1}</td><td class="player">${p.name}</td><td>${p.played}</td><td>${p.wins}</td><td>${p.losses}</td>
       <td>${p.setsWon}:${p.setsLost}</td><td>${p.gamesWon}:${p.gamesLost}</td><td><strong>${p.points}</strong></td>
     </tr>`).join("");
@@ -169,7 +169,7 @@ function mainBracketSvg() {
   ].join("");
 
   return `
-    <svg class="bracket-svg" viewBox="0 0 1640 790" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Haupttableau">
+    <svg class="bracket-svg" viewBox="0 0 1640 790" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tableau 1">
       ${matches}
       ${c}
     </svg>
@@ -210,7 +210,7 @@ function placementBracketSvg() {
   ].join("");
 
   return `
-    <svg class="bracket-svg" viewBox="0 0 1300 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Platzierungstableau">
+    <svg class="bracket-svg" viewBox="0 0 1300 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tableau 2">
       ${matches}
       ${c}
     </svg>
@@ -221,16 +221,16 @@ function renderQualified() {
   $("#qualified").innerHTML = `
     <div class="ko-layout">
       <div class="ko-block">
-        <h3>Haupttableau</h3>
-        <p class="muted ko-note">Aktuell als fixes Tableau gemäss deiner Setzung – noch ohne echte Spielernamen.</p>
+        <h3>Tableau 1</h3>
+        <p class="muted ko-note">Erster, Zweiter, und Dritter jeder Gruppe.</p>
         <div class="bracket-scroll">
           ${mainBracketSvg()}
         </div>
       </div>
 
       <div class="ko-block">
-        <h3>Platzierungstableau</h3>
-        <p class="muted ko-note">Vierter und Fünfter jeder Gruppe gemäss deinem zweiten Bracket.</p>
+        <h3>Tableau 2</h3>
+        <p class="muted ko-note">Vierter und Fünfter jeder Gruppe.</p>
         <div class="bracket-scroll">
           ${placementBracketSvg()}
         </div>
