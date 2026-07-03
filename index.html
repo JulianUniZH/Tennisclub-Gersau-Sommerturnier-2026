@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tennisturnier – Live Übersicht</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">🎾 Tennisturnier</p>
+      <h1 id="tournament-title">Gruppenphase</h1>
+      <p id="tournament-subtitle" class="subtitle"></p>
+    </div>
+    <a class="button" href="#schedule">Spielplan</a>
+  </header>
+
+  <main>
+    <section class="card intro">
+      <h2>Aktueller Stand</h2>
+      <p>Die Tabellen werden automatisch aus den eingetragenen Resultaten berechnet. Ergebnisse änderst du in <code>data.js</code>.</p>
+      <div id="meta" class="meta"></div>
+    </section>
+
+    <section id="groups" class="grid"></section>
+
+    <section id="schedule" class="card">
+      <h2>Alle Spiele</h2>
+      <div id="matches"></div>
+    </section>
+
+    <section id="knockout" class="card">
+      <h2>KO-Phase</h2>
+      <p class="muted">Vorschlag: Gruppensieger und Gruppenzweite qualifizieren sich fürs Viertelfinale.</p>
+      <div id="qualified"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Stand: <span id="last-updated"></span></span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
