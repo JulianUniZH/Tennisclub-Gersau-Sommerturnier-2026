@@ -96,54 +96,59 @@ function svgConnector(fromX, fromY, toX, toY) {
   ].join("");
 }
 
-function svgMatch(x, y, line1 = "", line2 = "", width = 360, height = 60) {
+function svgMatch(x, y, line1 = "", line2 = "", score = "", width = 430, height = 60) {
   const text1 = line1 || "";
   const text2 = line2 || "";
+  const result = score || "";
+
   return `
     <g>
       <rect x="${x}" y="${y}" width="${width}" height="${height}" fill="#f8f9fb" stroke="#cfd5dc" stroke-width="2" />
       <rect x="${x}" y="${y}" width="28" height="${height}" fill="#b9c5d6" />
       <line x1="${x}" y1="${y + height / 2}" x2="${x + width}" y2="${y + height / 2}" stroke="#d7dce2" stroke-width="2" />
-      <line x1="${x + width - 70}" y1="${y}" x2="${x + width - 70}" y2="${y + height}" stroke="#cfd5dc" stroke-width="2" />
-      <text x="${x + 46}" y="${y + 22}" font-family="Arial, sans-serif" font-size="18" fill="#111">${text1}</text>
-      <text x="${x + 46}" y="${y + 48}" font-family="Arial, sans-serif" font-size="18" fill="#111">${text2}</text>
+      <line x1="${x + width - 150}" y1="${y}" x2="${x + width - 150}" y2="${y + height}" stroke="#cfd5dc" stroke-width="2" />
+
+      <text x="${x + 46}" y="${y + 22}" font-family="Arial, sans-serif" font-size="17" fill="#111">${text1}</text>
+      <text x="${x + 46}" y="${y + 48}" font-family="Arial, sans-serif" font-size="17" fill="#111">${text2}</text>
+
+      <text x="${x + width - 75}" y="${y + 22}" font-family="Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#111">${result}</text>
     </g>
   `;
 }
 
 function mainBracketSvg() {
-  const w = 360;
+  const w = 430;
   const h = 60;
 
   const x1 = 0;
-  const x2 = 420;
-  const x3 = 840;
-  const x4 = 1260;
+  const x2 = 500;
+  const x3 = 1000;
+  const x4 = 1500;
 
   const m = [
-    { x: x1, y: 0,   a: "-",                b: "-" },
-    { x: x1, y: 90,  a: "Zweiter Gruppe C", b: "Dritter Gruppe D" },
-    { x: x2, y: 45,  a: "Sieger Gruppe A",  b: "" },
+    { x: x1, y: 0,   a: "-",                b: "-", score: "" },
+    { x: x1, y: 90,  a: "Zweiter Gruppe C", b: "Dritter Gruppe D", score: "" },
+    { x: x2, y: 45,  a: "Sieger Gruppe A",  b: "", score: "" },
 
-    { x: x1, y: 210, a: "-",                b: "-" },
-    { x: x1, y: 300, a: "Zweiter Gruppe D", b: "Dritter Gruppe C" },
-    { x: x2, y: 255, a: "Sieger Gruppe B",  b: "" },
+    { x: x1, y: 210, a: "-",                b: "-", score: "" },
+    { x: x1, y: 300, a: "Zweiter Gruppe D", b: "Dritter Gruppe C", score: "" },
+    { x: x2, y: 255, a: "Sieger Gruppe B",  b: "", score: "" },
 
-    { x: x1, y: 420, a: "-",                b: "-" },
-    { x: x1, y: 510, a: "Zweiter Gruppe A", b: "Dritter Gruppe B" },
-    { x: x2, y: 465, a: "Sieger Gruppe C",  b: "" },
+    { x: x1, y: 420, a: "-",                b: "-", score: "" },
+    { x: x1, y: 510, a: "Zweiter Gruppe A", b: "Dritter Gruppe B", score: "" },
+    { x: x2, y: 465, a: "Sieger Gruppe C",  b: "", score: "" },
 
-    { x: x1, y: 630, a: "-",                b: "-" },
-    { x: x1, y: 720, a: "Zweiter Gruppe B", b: "Dritter Gruppe A" },
-    { x: x2, y: 675, a: "Sieger Gruppe D",  b: "" },
+    { x: x1, y: 630, a: "-",                b: "-", score: "" },
+    { x: x1, y: 720, a: "Zweiter Gruppe B", b: "Dritter Gruppe A", score: "" },
+    { x: x2, y: 675, a: "Sieger Gruppe D",  b: "", score: "" },
 
-    { x: x3, y: 150, a: "", b: "" },
-    { x: x3, y: 570, a: "", b: "" },
+    { x: x3, y: 150, a: "", b: "", score: "" },
+    { x: x3, y: 570, a: "", b: "", score: "" },
 
-    { x: x4, y: 360, a: "", b: "" }
+    { x: x4, y: 360, a: "", b: "", score: "" }
   ];
 
-  const matches = m.map(item => svgMatch(item.x, item.y, item.a, item.b, w, h)).join("");
+  const matches = m.map(item => svgMatch(item.x, item.y, item.a, item.b, item.score, w, h)).join("");
 
   const c = [
     svgConnector(x1 + w, 30,  x2, 75),
@@ -169,7 +174,7 @@ function mainBracketSvg() {
   ].join("");
 
   return `
-    <svg class="bracket-svg" viewBox="0 0 1640 790" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tableau 1">
+    <svg class="bracket-svg" viewBox="0 0 1930 790" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tableau 1">
       ${matches}
       ${c}
     </svg>
@@ -177,26 +182,26 @@ function mainBracketSvg() {
 }
 
 function placementBracketSvg() {
-  const w = 360;
+  const w = 430;
   const h = 60;
 
   const x1 = 0;
-  const x2 = 450;
-  const x3 = 900;
+  const x2 = 520;
+  const x3 = 1040;
 
   const m = [
-    { x: x1, y: 0,   a: "Vierter Gruppe A", b: "Fünfter Gruppe D" },
-    { x: x1, y: 170, a: "Vierter Gruppe B", b: "Fünfter Gruppe C" },
-    { x: x1, y: 360, a: "Vierter Gruppe C", b: "Fünfter Gruppe B" },
-    { x: x1, y: 530, a: "Vierter Gruppe D", b: "Fünfter Gruppe A" },
+    { x: x1, y: 0,   a: "Vierter Gruppe A", b: "Fünfter Gruppe D", score: "" },
+    { x: x1, y: 170, a: "Vierter Gruppe B", b: "Fünfter Gruppe C", score: "" },
+    { x: x1, y: 360, a: "Vierter Gruppe C", b: "Fünfter Gruppe B", score: "" },
+    { x: x1, y: 530, a: "Vierter Gruppe D", b: "Fünfter Gruppe A", score: "" },
 
-    { x: x2, y: 85,  a: "", b: "" },
-    { x: x2, y: 445, a: "", b: "" },
+    { x: x2, y: 85,  a: "", b: "", score: "" },
+    { x: x2, y: 445, a: "", b: "", score: "" },
 
-    { x: x3, y: 265, a: "", b: "" }
+    { x: x3, y: 265, a: "", b: "", score: "" }
   ];
 
-  const matches = m.map(item => svgMatch(item.x, item.y, item.a, item.b, w, h)).join("");
+  const matches = m.map(item => svgMatch(item.x, item.y, item.a, item.b, item.score, w, h)).join("");
 
   const c = [
     svgConnector(x1 + w, 30,  x2, 115),
@@ -210,7 +215,7 @@ function placementBracketSvg() {
   ].join("");
 
   return `
-    <svg class="bracket-svg" viewBox="0 0 1300 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tableau 2">
+    <svg class="bracket-svg" viewBox="0 0 1470 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tableau 2">
       ${matches}
       ${c}
     </svg>
