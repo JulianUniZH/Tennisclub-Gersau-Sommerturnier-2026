@@ -4,7 +4,7 @@
 
 const tournament = {
   title: "Tennisclub Gersau Sommerturnier 2026",
-  subtitle: "Gruppenphase · 4 Gruppen à 5 Spieler",
+  subtitle: "Gruppenphase · 4 Gruppen à 5 Spieler & 2 Tableaus",
   pointsForWin: 1,
   updatedAt: "2026-07-03 12:00",
   groups: {
