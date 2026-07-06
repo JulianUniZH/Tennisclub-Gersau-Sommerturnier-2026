@@ -81,7 +81,7 @@ const tournament = {
     { group: "Gruppe D", p1: "Vasco Sommacal", p2: "Enzo Nigg", score: "" },
     { group: "Gruppe D", p1: "Gianfranco Da Palma", p2: "Marco Camenzind", score: "" },
     { group: "Gruppe D", p1: "Urs Huber", p2: "Enzo Nigg", score: "" },
-    { group: "Gruppe D", p1: "Vasco Sommacal", p2: "Gianfranco Da Palma", score: "" },
+    { group: "Gruppe D", p1: "Vasco Sommacal", p2: "Gianfranco Da Palma", score: "6:2 6:2" },
     { group: "Gruppe D", p1: "Enzo Nigg", p2: "Marco Camenzind", score: "" },
     { group: "Gruppe D", p1: "Gianfranco Da Palma", p2: "Urs Huber", score: "" },
     { group: "Gruppe D", p1: "Marco Camenzind", p2: "Vasco Sommacal", score: "" }
