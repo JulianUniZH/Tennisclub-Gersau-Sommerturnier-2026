@@ -63,7 +63,7 @@ const tournament = {
     { group: "Gruppe B", p1: "Marco Appert", p2: "Pascal Steiner", score: "" },
 
     // Gruppe C
-    { group: "Gruppe C", p1: "Oliver Bolfing", p2: "Marcel Gehringer", score: "" },
+    { group: "Gruppe C", p1: "Oliver Bolfing", p2: "Marcel Gehringer", score: "3:6 6:0 6:1" },
     { group: "Gruppe C", p1: "Lars Nigg", p2: "Philip Camenzind", score: "" },
     { group: "Gruppe C", p1: "Petra Rotter", p2: "Oliver Bolfing", score: "" },
     { group: "Gruppe C", p1: "Marcel Gehringer", p2: "Lars Nigg", score: "" },
