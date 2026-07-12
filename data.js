@@ -6,7 +6,7 @@ const tournament = {
   title: "Tennisclub Gersau Sommerturnier 2026",
   subtitle: "Gruppenphase · 4 Gruppen à 5 Spieler & 2 Tableaus",
   pointsForWin: 1,
-  updatedAt: "2026-07-11 12:00",
+  updatedAt: "2026-07-12 19:00",
   groups: {
     "Gruppe A": [
       "Mitch Steffan",
@@ -53,7 +53,7 @@ const tournament = {
     // Gruppe B
     { group: "Gruppe B", p1: "Julian Bolfing", p2: "Pascal Steiner", score: "6:4 6:1" },
     { group: "Gruppe B", p1: "Sandro Schuler", p2: "Alan Tarantino", score: "" },
-    { group: "Gruppe B", p1: "Marco Appert", p2: "Julian Bolfing", score: "" },
+    { group: "Gruppe B", p1: "Marco Appert", p2: "Julian Bolfing", score: "2:6 0:6" },
     { group: "Gruppe B", p1: "Pascal Steiner", p2: "Sandro Schuler", score: "" },
     { group: "Gruppe B", p1: "Alan Tarantino", p2: "Marco Appert", score: "0:6 0:6" },
     { group: "Gruppe B", p1: "Julian Bolfing", p2: "Sandro Schuler", score: "" },
