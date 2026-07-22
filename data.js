@@ -6,7 +6,7 @@ const tournament = {
   title: "Tennisclub Gersau Sommerturnier 2026",
   subtitle: "Gruppenphase · 4 Gruppen à 5 Spieler & 2 Tableaus",
   pointsForWin: 1,
-  updatedAt: "2026-07-21 21:45",
+  updatedAt: "2026-07-22 21:50",
   groups: {
     "Gruppe A": [
       "Mitch Steffan",
@@ -77,10 +77,10 @@ const tournament = {
     // Gruppe D
     { group: "Gruppe D", p1: "Urs Huber", p2: "Vasco Sommacal", score: "" },
     { group: "Gruppe D", p1: "Enzo Nigg", p2: "Gianfranco Da Palma", score: "6:4 7:5" },
-    { group: "Gruppe D", p1: "Marco Camenzind", p2: "Urs Huber", score: "" },
+    { group: "Gruppe D", p1: "Marco Camenzind", p2: "Urs Huber", score: "0:6 1:6" },
     { group: "Gruppe D", p1: "Vasco Sommacal", p2: "Enzo Nigg", score: "6:2 6:1" },
     { group: "Gruppe D", p1: "Gianfranco Da Palma", p2: "Marco Camenzind", score: "" },
-    { group: "Gruppe D", p1: "Urs Huber", p2: "Enzo Nigg", score: "" },
+    { group: "Gruppe D", p1: "Urs Huber", p2: "Enzo Nigg", score: "6:0 6:0" },
     { group: "Gruppe D", p1: "Vasco Sommacal", p2: "Gianfranco Da Palma", score: "6:2 6:2" },
     { group: "Gruppe D", p1: "Enzo Nigg", p2: "Marco Camenzind", score: "" },
     { group: "Gruppe D", p1: "Gianfranco Da Palma", p2: "Urs Huber", score: "" },
