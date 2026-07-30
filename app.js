@@ -132,7 +132,7 @@ function mainBracketSvg() {
 
     { x: x1, y: 210, a: "-",                b: "-", score: "" },
     { x: x1, y: 300, a: "Zweiter Gruppe D", b: "Dritter Gruppe C", score: "" },
-    { x: x2, y: 255, a: "Sieger Gruppe B",  b: "", score: "" },
+    { x: x2, y: 255, a: "Julian Bolfing (1. B)",  b: "", score: "" },
 
     { x: x1, y: 420, a: "-",                b: "-", score: "" },
     { x: x1, y: 510, a: "Zweiter Gruppe A", b: "Dritter Gruppe B", score: "" },
@@ -140,7 +140,7 @@ function mainBracketSvg() {
 
     { x: x1, y: 630, a: "-",                b: "-", score: "" },
     { x: x1, y: 720, a: "Zweiter Gruppe B", b: "Dritter Gruppe A", score: "" },
-    { x: x2, y: 675, a: "Sieger Gruppe D",  b: "", score: "" },
+    { x: x2, y: 675, a: "Urs Huber (1. D)",  b: "", score: "" },
 
     { x: x3, y: 150, a: "", b: "", score: "" },
     { x: x3, y: 570, a: "", b: "", score: "" },
