@@ -6,7 +6,7 @@ const tournament = {
   title: "Tennisclub Gersau Sommerturnier 2026",
   subtitle: "Gruppenphase · 4 Gruppen à 5 Spieler & 2 Tableaus",
   pointsForWin: 1,
-  updatedAt: "2026-07-29 18:20",
+  updatedAt: "2026-07-30 12:45",
   groups: {
     "Gruppe A": [
       "Mitch Steffan",
@@ -40,7 +40,7 @@ const tournament = {
   matches: [
     // Gruppe A
     { group: "Gruppe A", p1: "Mitch Steffan", p2: "Mario Camenzind", score: "1:6 2:6" },
-    { group: "Gruppe A", p1: "Maximilian Weber", p2: "Christian Schnyder", score: "" },
+    { group: "Gruppe A", p1: "Maximilian Weber", p2: "Christian Schnyder", score: "3:6 1:6" },
     { group: "Gruppe A", p1: "Sabine Allemann", p2: "Mitch Steffan", score: "" },
     { group: "Gruppe A", p1: "Mario Camenzind", p2: "Maximilian Weber", score: "6:1 6:2" },
     { group: "Gruppe A", p1: "Christian Schnyder", p2: "Sabine Allemann", score: "" },
