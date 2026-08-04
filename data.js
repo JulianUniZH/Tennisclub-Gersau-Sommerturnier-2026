@@ -64,13 +64,13 @@ const tournament = {
 
     // Gruppe C
     { group: "Gruppe C", p1: "Oliver Bolfing", p2: "Marcel Gehringer", score: "" },
-    { group: "Gruppe C", p1: "Lars Nigg", p2: "Philip Camenzind", score: "" },
+    { group: "Gruppe C", p1: "Lars Nigg", p2: "Philip Camenzind", score: "w.o.", winner: "p2" },
     { group: "Gruppe C", p1: "Petra Rotter", p2: "Oliver Bolfing", score: "" },
-    { group: "Gruppe C", p1: "Marcel Gehringer", p2: "Lars Nigg", score: "" },
+    { group: "Gruppe C", p1: "Marcel Gehringer", p2: "Lars Nigg", score: "6:0 6:0" },
     { group: "Gruppe C", p1: "Philip Camenzind", p2: "Petra Rotter", score: "" },
-    { group: "Gruppe C", p1: "Oliver Bolfing", p2: "Lars Nigg", score: "" },
+    { group: "Gruppe C", p1: "Oliver Bolfing", p2: "Lars Nigg", score: "w.o.", winner: "p1" },
     { group: "Gruppe C", p1: "Marcel Gehringer", p2: "Philip Camenzind", score: "" },
-    { group: "Gruppe C", p1: "Lars Nigg", p2: "Petra Rotter", score: "" },
+    { group: "Gruppe C", p1: "Lars Nigg", p2: "Petra Rotter", score: "w.o.", winner: "p2" },
     { group: "Gruppe C", p1: "Philip Camenzind", p2: "Oliver Bolfing", score: "" },
     { group: "Gruppe C", p1: "Petra Rotter", p2: "Marcel Gehringer", score: "" },
 

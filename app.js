@@ -17,10 +17,41 @@ function parseScore(score) {
   return { p1Sets, p2Sets, p1Games, p2Games, winner: p1Sets > p2Sets ? "p1" : "p2" };
 }
 
+function parseMatchResult(match) {
+  const parsed = parseScore(match.score);
+
+  if (parsed) {
+    return {
+      ...parsed,
+      isWalkover: false
+    };
+  }
+
+  const scoreText = (match.score || "").trim().toLowerCase();
+  const isWalkover =
+    scoreText === "wo" ||
+    scoreText === "w.o." ||
+    scoreText === "w.o" ||
+    scoreText === "walkover";
+
+  if (isWalkover && (match.winner === "p1" || match.winner === "p2")) {
+    return {
+      p1Sets: 0,
+      p2Sets: 0,
+      p1Games: 0,
+      p2Games: 0,
+      winner: match.winner,
+      isWalkover: true
+    };
+  }
+
+  return null;
+}
+
 function standingsFor(groupName) {
   const stats = new Map(tournament.groups[groupName].map(p => [p, emptyStats(p)]));
   tournament.matches.filter(m => m.group === groupName).forEach(match => {
-    const result = parseScore(match.score);
+    const result = parseMatchResult(match);
     if (!result) return;
     const a = stats.get(match.p1);
     const b = stats.get(match.p2);
@@ -248,7 +279,7 @@ function render() {
   $("#tournament-title").textContent = tournament.title;
   $("#tournament-subtitle").textContent = tournament.subtitle;
   $("#last-updated").textContent = tournament.updatedAt;
-  const played = tournament.matches.filter(m => parseScore(m.score)).length;
+  const played = tournament.matches.filter(m => parseMatchResult(m)).length;
   $("#meta").innerHTML = `<span>${played}/${tournament.matches.length} Spiele gespielt</span><span>${Object.keys(tournament.groups).length} Gruppen</span>`;
   $("#groups").innerHTML = Object.keys(tournament.groups).map(groupCard).join("");
   renderAllMatches();
