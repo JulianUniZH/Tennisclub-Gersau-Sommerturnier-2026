@@ -221,7 +221,7 @@ function placementBracketSvg() {
   const x3 = 1040;
 
   const m = [
-    { x: x1, y: 0,   a: "Vierter Gruppe A", b: "Fünfter Gruppe D", score: "" },
+    { x: x1, y: 0,   a: "Vierter Gruppe A", b: "Gianfranco Da Palma (5. D)", score: "" },
     { x: x1, y: 170, a: "Vierter Gruppe B", b: "Lars Nigg (5. C)", score: "" },
     { x: x1, y: 360, a: "Vierter Gruppe C", b: "Alan Tarantino (5. B)", score: "" },
     { x: x1, y: 530, a: "Vierter Gruppe D", b: "Fünfter Gruppe A", score: "" },
