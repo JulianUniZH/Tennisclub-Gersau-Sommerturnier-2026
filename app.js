@@ -158,16 +158,16 @@ function mainBracketSvg() {
 
   const m = [
     { x: x1, y: 0,   a: "-",                b: "-", score: "" },
-    { x: x1, y: 90,  a: "Zweiter Gruppe C", b: "Dritter Gruppe D", score: "" },
+    { x: x1, y: 90,  a: "Marcel Gehringer (2. C)", b: "Vasco Sommacal (3. D)", score: "" },
     { x: x2, y: 45,  a: "Sieger Gruppe A",  b: "", score: "" },
 
     { x: x1, y: 210, a: "-",                b: "-", score: "" },
-    { x: x1, y: 300, a: "Zweiter Gruppe D", b: "Dritter Gruppe C", score: "" },
+    { x: x1, y: 300, a: "Marco Camenzind (2. D)", b: "Philip Camenzind (3. C)", score: "" },
     { x: x2, y: 255, a: "Julian Bolfing (1. B)",  b: "", score: "" },
 
     { x: x1, y: 420, a: "-",                b: "-", score: "" },
     { x: x1, y: 510, a: "Zweiter Gruppe A", b: "Dritter Gruppe B", score: "" },
-    { x: x2, y: 465, a: "Sieger Gruppe C",  b: "", score: "" },
+    { x: x2, y: 465, a: "Oliver Bolfing (1. C)",  b: "", score: "" },
 
     { x: x1, y: 630, a: "-",                b: "-", score: "" },
     { x: x1, y: 720, a: "Zweiter Gruppe B", b: "Dritter Gruppe A", score: "" },
@@ -224,10 +224,10 @@ function placementBracketSvg() {
     { x: x1, y: 0,   a: "Vierter Gruppe A", b: "Gianfranco Da Palma (5. D)", score: "" },
     { x: x1, y: 170, a: "Vierter Gruppe B", b: "Lars Nigg (5. C)", score: "" },
     { x: x1, y: 360, a: "Petra Rotter (4. C)", b: "Alan Tarantino (5. B)", score: "" },
-    { x: x1, y: 530, a: "Vierter Gruppe D", b: "Mitch Steffan (5. A)", score: "w.o." },
+    { x: x1, y: 530, a: "Enzo Nigg (4. D)", b: "Mitch Steffan (5. A)", score: "w.o." },
 
     { x: x2, y: 85,  a: "", b: "", score: "" },
-    { x: x2, y: 445, a: "", b: "Vierter Gruppe D", score: "" },
+    { x: x2, y: 445, a: "", b: "Enzo Nigg", score: "" },
 
     { x: x3, y: 265, a: "", b: "", score: "" }
   ];
