@@ -159,7 +159,7 @@ function mainBracketSvg() {
   const m = [
     { x: x1, y: 0,   a: "-",                b: "-", score: "" },
     { x: x1, y: 90,  a: "Marcel Gehringer (2. C)", b: "Vasco Sommacal (3. D)", score: "" },
-    { x: x2, y: 45,  a: "Sieger Gruppe A",  b: "", score: "" },
+    { x: x2, y: 45,  a: "Mario Camenzind (1. A)",  b: "", score: "" },
 
     { x: x1, y: 210, a: "-",                b: "-", score: "" },
     { x: x1, y: 300, a: "Marco Camenzind (2. D)", b: "Philip Camenzind (3. C)", score: "" },
