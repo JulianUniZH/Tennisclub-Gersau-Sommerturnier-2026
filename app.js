@@ -158,8 +158,8 @@ function mainBracketSvg() {
 
   const m = [
     { x: x1, y: 0,   a: "-",                b: "-", score: "" },
-    { x: x1, y: 90,  a: "Marcel Gehringer (2. C)", b: "Vasco Sommacal (3. D)", score: "" },
-    { x: x2, y: 45,  a: "Mario Camenzind (1. A)",  b: "", score: "" },
+    { x: x1, y: 90,  a: "Marcel Gehringer (2. C)", b: "Vasco Sommacal (3. D)", score: "4:6 6:3 6:0" },
+    { x: x2, y: 45,  a: "Mario Camenzind (1. A)",  b: "Marcel Gehringer", score: "" },
 
     { x: x1, y: 210, a: "-",                b: "-", score: "" },
     { x: x1, y: 300, a: "Marco Camenzind (2. D)", b: "Philip Camenzind (3. C)", score: "" },
@@ -221,7 +221,7 @@ function placementBracketSvg() {
   const x3 = 1040;
 
   const m = [
-    { x: x1, y: 0,   a: "Vierter Gruppe A", b: "Gianfranco Da Palma (5. D)", score: "" },
+    { x: x1, y: 0,   a: "Maximilian Weber (4. A)", b: "Gianfranco Da Palma (5. D)", score: "" },
     { x: x1, y: 170, a: "Vierter Gruppe B", b: "Lars Nigg (5. C)", score: "w.o." },
     { x: x1, y: 360, a: "Petra Rotter (4. C)", b: "Alan Tarantino (5. B)", score: "w.o." },
     { x: x1, y: 530, a: "Enzo Nigg (4. D)", b: "Mitch Steffan (5. A)", score: "w.o." },
