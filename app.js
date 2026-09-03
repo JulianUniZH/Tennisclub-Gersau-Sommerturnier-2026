@@ -221,12 +221,12 @@ function placementBracketSvg() {
   const x3 = 1040;
 
   const m = [
-    { x: x1, y: 0,   a: "Maximilian Weber (4. A)", b: "Gianfranco Da Palma (5. D)", score: "" },
+    { x: x1, y: 0,   a: "Maximilian Weber (4. A)", b: "Gianfranco Da Palma (5. D)", score: "6:2 6:2" },
     { x: x1, y: 170, a: "Sandro Schuler (4. B)", b: "Lars Nigg (5. C)", score: "w.o." },
     { x: x1, y: 360, a: "Petra Rotter (4. C)", b: "Alan Tarantino (5. B)", score: "w.o." },
     { x: x1, y: 530, a: "Enzo Nigg (4. D)", b: "Mitch Steffan (5. A)", score: "w.o." },
 
-    { x: x2, y: 85,  a: "", b: "Sandro Schuler", score: "" },
+    { x: x2, y: 85,  a: "", b: "Sandro Schuler", score: "Maximilian Weber" },
     { x: x2, y: 445, a: "Alan Tarantino", b: "Enzo Nigg", score: "0:6 1:6" },
 
     { x: x3, y: 265, a: "", b: "Enzo Nigg", score: "" }
