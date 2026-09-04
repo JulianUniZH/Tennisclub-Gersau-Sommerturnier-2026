@@ -170,8 +170,8 @@ function mainBracketSvg() {
     { x: x2, y: 465, a: "Oliver Bolfing (1. C)",  b: "Christian Schnyder", score: "" },
 
     { x: x1, y: 630, a: "-",                b: "-", score: "" },
-    { x: x1, y: 720, a: "Pascal Steiner (2. B)", b: "Sabine Allemann (3. A)", score: "" },
-    { x: x2, y: 675, a: "Urs Huber (1. D)",  b: "", score: "" },
+    { x: x1, y: 720, a: "Pascal Steiner (2. B)", b: "Sabine Allemann (3. A)", score: "6:0 6:2" },
+    { x: x2, y: 675, a: "Urs Huber (1. D)",  b: "Pascal Steiner", score: "" },
 
     { x: x3, y: 150, a: "", b: "", score: "" },
     { x: x3, y: 570, a: "", b: "", score: "" },
