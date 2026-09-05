@@ -6,7 +6,7 @@ const tournament = {
   title: "Tennisclub Gersau Sommerturnier 2026",
   subtitle: "Gruppenphase · 4 Gruppen à 5 Spieler & 2 Tableaus",
   pointsForWin: 1,
-  updatedAt: "2026-08-21 00:30",
+  updatedAt: "2026-09-05 12:30",
   groups: {
     "Gruppe A": [
       "Mitch Steffan",
