@@ -162,8 +162,8 @@ function mainBracketSvg() {
     { x: x2, y: 45,  a: "Mario Camenzind (1. A)",  b: "Marcel Gehringer", score: "" },
 
     { x: x1, y: 210, a: "-",                b: "-", score: "" },
-    { x: x1, y: 300, a: "Marco Camenzind (2. D)", b: "Philip Camenzind (3. C)", score: "" },
-    { x: x2, y: 255, a: "Julian Bolfing (1. B)",  b: "", score: "" },
+    { x: x1, y: 300, a: "Marco Camenzind (2. D)", b: "Philip Camenzind (3. C)", score: "6:3 6:4" },
+    { x: x2, y: 255, a: "Julian Bolfing (1. B)",  b: "Marco Camenzind", score: "" },
 
     { x: x1, y: 420, a: "-",                b: "-", score: "" },
     { x: x1, y: 510, a: "Christian Schnyder (2. A)", b: "Marco Appert (3. B)", score: "6:0 6:0" },
