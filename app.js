@@ -226,10 +226,10 @@ function placementBracketSvg() {
     { x: x1, y: 360, a: "Petra Rotter (4. C)", b: "Alan Tarantino (5. B)", score: "w.o." },
     { x: x1, y: 530, a: "Enzo Nigg (4. D)", b: "Mitch Steffan (5. A)", score: "w.o." },
 
-    { x: x2, y: 85,  a: "Maximilian Weber", b: "Sandro Schuler", score: "" },
+    { x: x2, y: 85,  a: "Maximilian Weber", b: "Sandro Schuler", score: "6:3 6:4" },
     { x: x2, y: 445, a: "Alan Tarantino", b: "Enzo Nigg", score: "0:6 1:6" },
 
-    { x: x3, y: 265, a: "", b: "Enzo Nigg", score: "" }
+    { x: x3, y: 265, a: "Maximilian Weber", b: "Enzo Nigg", score: "" }
   ];
 
   const matches = m.map(item => svgMatch(item.x, item.y, item.a, item.b, item.score, w, h)).join("");
