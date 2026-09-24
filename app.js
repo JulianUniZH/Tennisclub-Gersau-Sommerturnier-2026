@@ -174,9 +174,9 @@ function mainBracketSvg() {
     { x: x2, y: 675, a: "Urs Huber (1. D)",  b: "Pascal Steiner", score: "4:6 2:6" },
 
     { x: x3, y: 150, a: "Mario Camenzind", b: "Julian Bolfing", score: "" },
-    { x: x3, y: 570, a: "Christian Schnyder", b: "Pascal Steiner", score: "" },
+    { x: x3, y: 570, a: "Christian Schnyder", b: "Pascal Steiner", score: "5:7 6:2 1:6" },
 
-    { x: x4, y: 360, a: "", b: "", score: "" }
+    { x: x4, y: 360, a: "", b: "Pascal Steiner", score: "" }
   ];
 
   const matches = m.map(item => svgMatch(item.x, item.y, item.a, item.b, item.score, w, h)).join("");
